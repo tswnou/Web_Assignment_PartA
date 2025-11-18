@@ -1,0 +1,94 @@
+/* ===== HAMBURGER BUTTON ===== */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1200;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px rgba(0,0,0,0.15));
+}
+
+/* ===== SIDEBAR NAV ===== */
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(180deg, #ffe6f2, #ffd6ee);
+    padding-top: 90px;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.20);
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 1190;
+}
+
+
+.nav.open {
+    transform: translateX(0);
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 25px;
+}
+
+.nav li {
+    margin-bottom: 18px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #b30086; /* σκούρο ροζ */
+    font-weight: 600;
+}
+
+/* ===== COURSES DROPDOWN ===== */
+.category-dropdown-btn {
+    width: 100%;
+    padding: 1em;
+    background: #ffb3d9;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.category-dropdown {
+    display: none;
+    background: white;
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.category-item {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    background: #ffe6f2;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.course-item {
+    margin-left: 20px;
+    padding: 0.3em 0;
+    font-size: 0.9em;
+}
+
+.course-list {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+

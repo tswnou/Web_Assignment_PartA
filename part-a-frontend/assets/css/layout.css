@@ -1,0 +1,165 @@
+/* ===========================
+   LAYOUT (header, logo, banner)
+   =========================== */
+
+/* Header wrapper */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* Logo */
+.logo img {
+    width: 110px;
+    height: auto;
+    border-radius: 14px;
+}
+
+/* Banner */
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.hero-text {
+    text-align: center;
+    padding: 20px 10px 30px;
+}
+
+.hero-text h2 {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+
+
+.hero-text {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero-card {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(200, 80, 192, 0.15);
+    text-align: center;
+}
+
+.hero-card h2 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-card p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+
+.hero-banner {
+    background: linear-gradient(135deg, #ffcce6, #ffe6ff);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+}
+
+.hero-banner h2 {
+    color: #b30086;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* Aesthetic soft gradient header */
+.hero-banner {
+    background: linear-gradient(135deg, #ffcce6, #ffe6ff);
+    padding: 90px 30px 110px;
+    text-align: center;
+    border-radius: 0 0 60px 60px;
+    box-shadow: 0 10px 25px rgba(200, 80, 192, 0.15);
+    margin-bottom: 40px;
+}
+
+.hero-banner h2 {
+    color: #b30086;
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.hero-banner p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-banner .btn-primary {
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+}
+
+.top-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.top-banner img {
+    width: 100%;
+    max-width: 1100px; /* για να μην γίνει υπερ-τεράστιο */
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(200, 80, 192, 0.12);
+}
+
+
+header {
+    position: relative;
+    z-index: 10; /* πάνω από το banner */
+}
+
+.top-banner {
+    width: 100%;
+    height: 260px; /* ΥΨΟΣ banner – μπορείς να το μεγαλώσεις */
+    overflow: hidden;
+    position: relative;
+    margin-top: -80px; /* Πίσω από το header */
+    border-radius: 0 0 40px 40px;
+}
+
+.top-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 💖 γεμίζει όλο το banner */
+    object-position: center; /* κεντράρει την εικόνα */
+}
+
+
+.top-banner img {
+    height: auto;
+}
+

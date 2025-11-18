@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learning Platform</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+
+    
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-container">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/img/logo.png" alt="E-Learning logo">
+            </a>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle">
+            <img src="assets/img/menu-icon.png" alt="menu">
+        </button>
+
+        <nav class="nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Αρχική</a></li>
+                <li><a href="courses.html">Μαθήματα</a></li>
+                <li><a href="books.html">Βιβλία</a></li>
+                <li><a href="about.html">Ποιοι είμαστε</a></li>
+                <li><a href="register.html" class="btn-primary">Εγγραφή</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- BANNER ΠΙΣΩ ΑΠΟ ΟΛΑ -->
+<div class="top-banner">
+    <img src="assets/img/banner.png" alt="Top Banner">
+</div>
+
+
+
+<main>
+
+<section class="hero-banner">
+    <h2>Μάθε Πληροφορική με σύγχρονο e-learning</h2>
+    <p>Μαθήματα, βιβλία, βίντεο και εκπαιδευτικό υλικό σε μία ολοκληρωμένη πλατφόρμα.</p>
+    <a href="register.html" class="btn-primary">Ξεκίνα τώρα</a>
+
+    
+</section>
+
+
+
+    <!-- Categories Section -->
+<section class="section">
+    <div class="container">
+        
+
+        <button class="category-dropdown-btn" id="categoryDropdownBtn">
+            ➤ Κύκλοι Μαθημάτων
+        </button>
+
+        <div class="category-dropdown" id="categoryDropdown">
+            <!-- Δυναμικά γεμίζει από JS -->
+        </div>
+
+    </div>
+</section>
+
+
+
+
+</main>
+
+
+<!-- JS -->
+<script src="assets/js/ui/menu.js"></script>
+<script src="assets/js/data/courses.js"></script>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
