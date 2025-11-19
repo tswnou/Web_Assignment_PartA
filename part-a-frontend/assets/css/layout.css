@@ -84,30 +84,25 @@
 }
 
 
-/* =============================== */
 /*       FULL WIDTH TOP BANNER     */
-/* =============================== */
 
 .top-banner {
     width: 100%;
-    height: 340px; /* Ρύθμισε εδώ το ύψος που θέλεις */
+    height: 340px; 
     background: url("assets/img/banner.png") center/cover no-repeat;
-    margin-top: 20px; /* ΤΟΣΟ χρειάζεσαι κάτω από το header */
+    margin-top: 20px; 
     border-radius: 0 0 55px 55px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 
-/* =============================== */
 /*         HERO SECTION BELOW      */
-/* =============================== */
 
 .hero-banner {
     background: linear-gradient(135deg, #ffcce6, #ffe6ff);
     padding: 70px 30px 110px;
     text-align: center;
 
-    /* ΑΝΕΒΑΣΑΜΕ ΤΟ HERO ΝΑ ΚΟΛΛΑΕΙ ΤΕΛΕΙΑ ΜΕ ΤΗ ΦΩΤΟ */
     margin-top: -35px;
 
     border-radius: 0 0 60px 60px;
@@ -138,9 +133,8 @@
 }
 
 
-/* =============================== */
 /*       LOGO + HEADER (unchanged) */
-/* =============================== */
+
 
 .header-container {
     display: flex;
@@ -191,10 +185,10 @@
 /* === Banner container === */
 .top-banner {
     width: 100%;
-    height: 320px;               /* ΑΝΕΒΑΣΑΜΕ ΥΨΟΣ (ή 350px αν θες πιο μεγάλο) */
+    height: 320px;               
     overflow: hidden;
     position: relative;
-    margin-top: -40px;           /* ΑΝΕΒΑΣΑΜΕ ΤΗΝ ΕΙΚΟΝΑ ΠΙΟ ΠΑΝΩ */
+    margin-top: -40px;           
     border-radius: 0 0 45px 45px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
@@ -210,12 +204,12 @@
 
 /* === Hero section κάτω από το banner === */
 .hero-banner {
-    padding-top: 80px;           /* ΠΗΓΕ ΠΙΟ ΠΑΝΩ! */
+    padding-top: 80px;           
     padding-bottom: 90px;
     background: linear-gradient(135deg, #ffcce6, #ffe6ff);
     text-align: center;
     border-radius: 0 0 60px 60px;
-    margin-top: -15px;           /* ΚΟΛΛΑΕΙ όμορφα στο banner */
+    margin-top: -15px;           
 }
 
 
@@ -226,7 +220,7 @@
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: none; 
     border-radius: 30px;
     box-shadow: 0 6px 18px rgba(255, 100, 180, 0.35);
     transition: transform 0.2s ease, box-shadow 0.3s ease;
