@@ -211,7 +211,6 @@
     box-shadow: 0 3px 10px rgba(200, 80, 192, 0.15);
 }
 
-/* Hover effect */
 .nav a:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 14px rgba(200, 80, 192, 0.25);
@@ -246,7 +245,6 @@
     margin-bottom: 30px;
 }
 
-/* GRID FOR FIELDS */
 .form-row {
     display: flex;
     gap: 20px;
@@ -274,7 +272,6 @@
     font-size: 1rem;
 }
 
-/* BUTTON */
 .btn-register {
     margin-top: 25px;
     padding: 12px 30px !important;
@@ -290,7 +287,7 @@
 
 /* Inputs – clean white style */
 .form-field input {
-    background: #ffffff; /*  */
+    background: #ffffff; 
     border: 2px solid #ffb3d9;
     border-radius: 12px;
     padding: 12px 14px;
@@ -303,15 +300,13 @@
     color: #bbb;
 }
 
-/* Focus effect */
 .form-field input:focus {
     border-color: #ff66c4;
     box-shadow: 0 0 8px rgba(255, 100, 200, 0.35);
 }
 
-/* Select – same white style */
 .form-field select {
-    background: #ffffff; /* WHITE */
+    background: #ffffff; 
     border: 2px solid #ffb3d9;
     border-radius: 12px;
     padding: 12px 14px;
@@ -337,7 +332,6 @@
 }
 
 
-/* MOBILE FIX */
 @media (max-width: 600px) {
     .form-row {
         flex-direction: column;
@@ -374,7 +368,6 @@
 }
 
 
-/* Dropdown options */
 .form-field select option {
     background: #ffe6f7;
     color: #333;
@@ -401,14 +394,12 @@
 }
 
 
-/* Wrapper */
 .custom-select {
     position: relative;
     width: 100%;
     font-size: 1rem;
 }
 
-/* Box that shows current choice */
 .custom-select .selected {
     background: #ffffff;
     border: 2px solid #ffb3d9;
@@ -420,7 +411,6 @@
     position: relative;
 }
 
-/* Small pink arrow */
 .custom-select .selected::after {
     content: "▾";
     position: absolute;
@@ -431,7 +421,6 @@
     font-size: 1.2rem;
 }
 
-/* Dropdown list */
 .custom-select .options {
     display: none;
     position: absolute;
