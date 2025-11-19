@@ -8,64 +8,65 @@ document.addEventListener("DOMContentLoaded", () => {
     if (recommendedSection) {
         recommendedSection.style.display = "none";
     }
+
+    
+    const btn = document.getElementById("categoryDropdownBtn");
+    const box = document.getElementById("categoryDropdown");
+
+    if (btn && box) {
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("open"); 
+            box.style.display = box.style.display === "block" ? "none" : "block";
+        });
+    }
+
 });
 
 
+
+//Άνοιγμα / Κλείσιμο μαθημάτων 
 function showCourses(category) {
-    
-    document.querySelectorAll(".course-list").forEach(div => {
-        if (div.id !== `courses-${category}`) {
-            div.innerHTML = "";
-        }
-    });
 
     const target = document.getElementById(`courses-${category}`);
     const filtered = courses.filter(c => c.category === category);
 
-    
-    if (target.innerHTML.trim() !== "") {
+    // Κλείνει ΟΛΑ τα άλλα accordions
+    document.querySelectorAll(".course-list").forEach(div => {
+        if (div !== target) {
+            div.classList.remove("open");
+            div.style.maxHeight = 0;
+            div.innerHTML = "";
+        }
+    });
+
+    // Αν είναι ήδη ανοιχτό → κλείστο
+    if (target.classList.contains("open")) {
+        target.classList.remove("open");
+        target.style.maxHeight = 0;
         target.innerHTML = "";
         return;
     }
 
-    
+    // Γεμίζει μαθήματα
     target.innerHTML = filtered
-        target.innerHTML = filtered
-    .map(c => `<div class="course-item">• ${c.title}</div>`)
-    .join("");
+        .map(c => `<div class="course-item">${c.title}</div>`)
+        .join("");
 
-    
-    const recommendedBox = document.getElementById("course-list");
-recommendedBox.innerHTML = filtered
-    .map(c => `
-        <article class="card">
-            <h3>${c.title}</h3>
-            <p>${c.description}</p>
-        </article>
-    `)
-    .join("");
-
-
-
-    const recommendedSection = document.getElementById("recommended-courses");
-    recommendedSection.style.display = "block";
+    // Smooth άνοιγμα
+    target.classList.add("open");
+    target.style.maxHeight = target.scrollHeight + "px";
 }
 
 
 
-
+//Δημιουργία dropdown με κατηγορίες
 
 function setupCategoriesDropdown() {
-    const btn = document.getElementById("categoryDropdownBtn");
+
     const box = document.getElementById("categoryDropdown");
 
-    if (!btn || !box) return;
+    if (!box) return;
 
-    btn.addEventListener("click", () => {
-        box.style.display = box.style.display === "block" ? "none" : "block";
-    });
-
-    
     box.innerHTML = categories
         .map(cat => `
             <div class="category-item" onclick="showCourses('${cat}')">
