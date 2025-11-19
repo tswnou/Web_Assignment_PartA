@@ -76,3 +76,35 @@ function setupCategoriesDropdown() {
         `)
         .join("");
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const select = document.getElementById("trackSelect");
+    const selected = select.querySelector(".selected");
+    const optionsBox = select.querySelector(".options");
+    const options = select.querySelectorAll(".option");
+
+    // Open dropdown
+    selected.addEventListener("click", () => {
+        optionsBox.style.display =
+            optionsBox.style.display === "block" ? "none" : "block";
+    });
+
+    // Select option
+    options.forEach(option => {
+        option.addEventListener("click", () => {
+            selected.textContent = option.textContent;
+            optionsBox.style.display = "none";
+
+            // Call your filter function
+            filterCourses(option.textContent);
+        });
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!select.contains(e.target)) {
+            optionsBox.style.display = "none";
+        }
+    });
+});

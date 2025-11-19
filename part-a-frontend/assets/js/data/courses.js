@@ -1,196 +1,202 @@
+// ===========================
+//  CATEGORIES (English)
+// ===========================
 const categories = [
-    "Επιστήμη Δεδομένων και ΜΜ", 
-    "Επιχειρησιακή Έρευνα",
-    "Εφαρμοσμένα Μαθηματικά",
-    "Θεωρητική Πληροφορική",
-    "Συστήματα και Δίκτυα",
-    "Συστήματα Λογισμικού",
-    "Διαχείριση Δεδομένων και Γνώσεων",
-    "Κυβερνοασφάλεια"
+    "Data Science & Applied Math",
+    "Operations Research",
+    "Applied Mathematics",
+    "Theoretical Computer Science",
+    "Systems & Networks",
+    "Software Systems",
+    "Data & Knowledge Management",
+    "Cybersecurity"
 ];
 
+// ===========================
+//  COURSES (English)
+// ===========================
 const courses = [
-    // 1. Επιστήμη Δεδομένων & ΜΜ
+    // 1. Data Science & Applied Math
     {
         id: 101,
-        title: "Στατιστική στην Πληροφορική",
-        description: "Βασικές μέθοδοι στατιστικής ανάλυσης για δεδομένα.",
+        title: "Statistics in Computer Science",
+        description: "Fundamental methods for statistical data analysis.",
         ects: 7,
-        category: "Επιστήμη Δεδομένων και ΜΜ"
+        category: "Data Science & Applied Math"
     },
     {
         id: 102,
-        title: "Μηχανική Μάθηση",
-        description: "Εισαγωγή σε supervised και unsupervised learning.",
+        title: "Machine Learning",
+        description: "Introduction to supervised and unsupervised learning.",
         ects: 7,
-        category: "Επιστήμη Δεδομένων και ΜΜ"
+        category: "Data Science & Applied Math"
     },
     {
         id: 103,
-        title: "Ανάλυση Δεδομένων",
-        description: "Τεχνικές ανάλυσης και επεξεργασίας μεγάλων δεδομένων.",
+        title: "Data Analysis",
+        description: "Techniques for processing and analyzing large datasets.",
         ects: 8,
-        category: "Επιστήμη Δεδομένων και ΜΜ"
+        category: "Data Science & Applied Math"
     },
 
-    // 2. Επιχειρησιακή Έρευνα
+    // 2. Operations Research
     {
         id: 201,
-        title: "Θεωρία Παιγνίων",
-        description: "Στρατηγικές αποφάσεις σε ανταγωνιστικά περιβάλλοντα.",
+        title: "Game Theory",
+        description: "Strategic decision-making in competitive environments.",
         ects: 6,
-        category: "Επιχειρησιακή Έρευνα"
+        category: "Operations Research"
     },
     {
         id: 202,
-        title: "Βελτιστοποίηση",
-        description: "Μέθοδοι επίλυσης προβλημάτων βελτιστοποίησης.",
+        title: "Optimization",
+        description: "Methods for solving optimization problems.",
         ects: 7,
-        category: "Επιχειρησιακή Έρευνα"
+        category: "Operations Research"
     },
     {
         id: 203,
-        title: "Επιχειρησιακή Στρατηγική",
-        description: "Εισαγωγή σε μοντέλα στρατηγικού σχεδιασμού.",
+        title: "Business Strategy",
+        description: "Introduction to strategic planning models.",
         ects: 6,
-        category: "Επιχειρησιακή Έρευνα"
+        category: "Operations Research"
     },
 
-    // 3. Εφαρμοσμένα Μαθηματικά
+    // 3. Applied Mathematics
     {
         id: 301,
-        title: "Διακριτά Μαθηματικά",
-        description: "Συνδυαστική, λογική και θεωρία γραφημάτων.",
+        title: "Discrete Mathematics",
+        description: "Combinatorics, logic, and graph theory.",
         ects: 6,
-        category: "Εφαρμοσμένα Μαθηματικά"
+        category: "Applied Mathematics"
     },
     {
         id: 302,
-        title: "Πιθανότητες",
-        description: "Βασικές αρχές θεωρίας πιθανοτήτων.",
+        title: "Probability Theory",
+        description: "Fundamental principles of probability.",
         ects: 6,
-        category: "Εφαρμοσμένα Μαθηματικά"
+        category: "Applied Mathematics"
     },
     {
         id: 303,
-        title: "Μαθηματικά ΙΙ",
-        description: "Συνέχεια του Μαθηματικά Ι με παραγώγιση & ολοκλήρωση.",
+        title: "Calculus II",
+        description: "Continuation of Calculus I with differentiation & integration.",
         ects: 6,
-        category: "Εφαρμοσμένα Μαθηματικά"
+        category: "Applied Mathematics"
     },
 
-    // 4. Θεωρητική Πληροφορική
+    // 4. Theoretical Computer Science
     {
         id: 401,
-        title: "Εισαγωγή στην Επιστήμη Υπολογιστών",
-        description: "Θεμελιώδεις αρχές της πληροφορικής.",
+        title: "Introduction to Computer Science",
+        description: "Core foundations of computing and information science.",
         ects: 6,
-        category: "Θεωρητική Πληροφορική"
+        category: "Theoretical Computer Science"
     },
     {
         id: 402,
-        title: "Θεωρία Υπολογισμού",
-        description: "Αυτόματα, γλώσσες, Turing και υπολογισιμότητα.",
+        title: "Theory of Computation",
+        description: "Automata, formal languages, Turing machines & computability.",
         ects: 7,
-        category: "Θεωρητική Πληροφορική"
+        category: "Theoretical Computer Science"
     },
     {
         id: 403,
-        title: "Αλγόριθμοι",
-        description: "Αποδοτικότητα, σχεδίαση και ανάλυση αλγορίθμων.",
+        title: "Algorithms",
+        description: "Design, analysis, and performance of algorithms.",
         ects: 7,
-        category: "Θεωρητική Πληροφορική"
+        category: "Theoretical Computer Science"
     },
 
-    // 5. Συστήματα και Δίκτυα
+    // 5. Systems & Networks
     {
         id: 501,
-        title: "Δίκτυα Επικοινωνιών",
-        description: "Μοντέλα επικοινωνίας και πρωτόκολλα.",
+        title: "Communication Networks",
+        description: "Network models, protocols and communication systems.",
         ects: 8,
-        category: "Συστήματα και Δίκτυα"
+        category: "Systems & Networks"
     },
     {
         id: 502,
-        title: "Οργάνωση Υπολογιστικών Συστημάτων",
-        description: "Βασικές αρχές hardware & αρχιτεκτονικής υπολογιστών.",
+        title: "Computer Systems Organization",
+        description: "Hardware architecture and system-level design.",
         ects: 7,
-        category: "Συστήματα και Δίκτυα"
+        category: "Systems & Networks"
     },
     {
         id: 503,
-        title: "Λειτουργικά Συστήματα",
-        description: "Διαδικασίες, μνήμη, file systems και concurrency.",
+        title: "Operating Systems",
+        description: "Processes, memory, file systems and concurrency.",
         ects: 8,
-        category: "Συστήματα και Δίκτυα"
+        category: "Systems & Networks"
     },
 
-    // 6. Συστήματα Λογισμικού
+    // 6. Software Systems
     {
         id: 601,
-        title: "Εισαγωγή στον Προγραμματισμό (Python)",
-        description: "Προγραμματιστικές έννοιες & εφαρμογές Python.",
+        title: "Introduction to Programming (Python)",
+        description: "Programming fundamentals and Python applications.",
         ects: 6,
-        category: "Συστήματα Λογισμικού"
+        category: "Software Systems"
     },
     {
         id: 602,
-        title: "Προγραμματισμός με Java",
-        description: "Αντικειμενοστραφής προγραμματισμός με Java.",
+        title: "Object-Oriented Programming (Java)",
+        description: "OOP principles and Java programming.",
         ects: 6,
-        category: "Συστήματα Λογισμικού"
+        category: "Software Systems"
     },
     {
         id: 603,
-        title: "Τεχνολογία Λογισμικού",
-        description: "Μοντέλα ανάπτυξης, testing & software engineering.",
+        title: "Software Engineering",
+        description: "Development models, testing, and engineering practices.",
         ects: 8,
-        category: "Συστήματα Λογισμικού"
+        category: "Software Systems"
     },
 
-    // 7. Διαχείριση Δεδομένων & Γνώσεων
+    // 7. Data & Knowledge Management
     {
         id: 701,
-        title: "Βάσεις Δεδομένων",
-        description: "SQL, ER μοντέλα, schemas & διαχείριση δεδομένων.",
+        title: "Databases",
+        description: "SQL, ER models, schemas and data management.",
         ects: 8,
-        category: "Διαχείριση Δεδομένων και Γνώσεων"
+        category: "Data & Knowledge Management"
     },
     {
         id: 702,
-        title: "Εξόρυξη Γνώσης",
-        description: "Κανόνες συσχέτισης, clustering, pattern mining.",
+        title: "Knowledge Discovery",
+        description: "Association rules, clustering and pattern mining.",
         ects: 6,
-        category: "Διαχείριση Δεδομένων και Γνώσεων"
+        category: "Data & Knowledge Management"
     },
     {
         id: 703,
-        title: "Ανάκτηση Πληροφορίας",
-        description: "Search engines, indexing & ranking models.",
+        title: "Information Retrieval",
+        description: "Search engines, indexing and ranking techniques.",
         ects: 6,
-        category: "Διαχείριση Δεδομένων και Γνώσεων"
+        category: "Data & Knowledge Management"
     },
 
-    // 8. Κυβερνοασφάλεια
+    // 8. Cybersecurity
     {
         id: 801,
-        title: "Κυβερνοασφάλεια",
-        description: "Ασφάλεια πληροφοριακών συστημάτων & πρακτικές.",
+        title: "Cybersecurity",
+        description: "Information system security and best practices.",
         ects: 7,
-        category: "Κυβερνοασφάλεια"
+        category: "Cybersecurity"
     },
     {
         id: 802,
-        title: "Ασφάλεια Δικτύων",
-        description: "Firewall, VPNs, κρυπτογραφία και επιθέσεις.",
+        title: "Network Security",
+        description: "Firewalls, VPNs, cryptography and network attacks.",
         ects: 6,
-        category: "Κυβερνοασφάλεια"
+        category: "Cybersecurity"
     },
     {
         id: 803,
-        title: "Κρυπτογραφία",
-        description: "Κρυπτοσυστήματα, CSS, RSA, ψηφιακές υπογραφές.",
+        title: "Cryptography",
+        description: "Cryptosystems, AES, RSA, and digital signatures.",
         ects: 6,
-        category: "Κυβερνοασφάλεια"
+        category: "Cybersecurity"
     }
 ];

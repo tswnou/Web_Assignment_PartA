@@ -84,6 +84,78 @@
 }
 
 
+/* =============================== */
+/*       FULL WIDTH TOP BANNER     */
+/* =============================== */
+
+.top-banner {
+    width: 100%;
+    height: 340px; /* Ρύθμισε εδώ το ύψος που θέλεις */
+    background: url("assets/img/banner.png") center/cover no-repeat;
+    margin-top: 20px; /* ΤΟΣΟ χρειάζεσαι κάτω από το header */
+    border-radius: 0 0 55px 55px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+/* =============================== */
+/*         HERO SECTION BELOW      */
+/* =============================== */
+
+.hero-banner {
+    background: linear-gradient(135deg, #ffcce6, #ffe6ff);
+    padding: 70px 30px 110px;
+    text-align: center;
+
+    /* ΑΝΕΒΑΣΑΜΕ ΤΟ HERO ΝΑ ΚΟΛΛΑΕΙ ΤΕΛΕΙΑ ΜΕ ΤΗ ΦΩΤΟ */
+    margin-top: -35px;
+
+    border-radius: 0 0 60px 60px;
+    box-shadow: 0 12px 30px rgba(200, 80, 192, 0.12);
+}
+
+.hero-banner h2 {
+    color: #b30086;
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.hero-banner p {
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+/* Call-to-action button */
+.hero-banner .btn-primary {
+    padding: 14px 32px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+
+/* =============================== */
+/*       LOGO + HEADER (unchanged) */
+/* =============================== */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo img {
+    width: 110px;
+    border-radius: 14px;
+}
+
+
+
 
 
 .hero-banner {
@@ -116,46 +188,36 @@
     border-radius: 25px;
 }
 
+/* === Banner container === */
 .top-banner {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.top-banner img {
-    width: 100%;
-    max-width: 1100px; 
-    border-radius: 25px;
-    box-shadow: 0 8px 20px rgba(200, 80, 192, 0.12);
-}
-
-
-header {
-    position: relative;
-    z-index: 10; 
-}
-
-.top-banner {
-    width: 100%;
-    height: 260px; 
+    height: 320px;               /* ΑΝΕΒΑΣΑΜΕ ΥΨΟΣ (ή 350px αν θες πιο μεγάλο) */
     overflow: hidden;
     position: relative;
-    margin-top: -80px; 
-    border-radius: 0 0 40px 40px;
+    margin-top: -40px;           /* ΑΝΕΒΑΣΑΜΕ ΤΗΝ ΕΙΚΟΝΑ ΠΙΟ ΠΑΝΩ */
+    border-radius: 0 0 45px 45px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
+/* === Banner image === */
 .top-banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    object-position: center; 
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
-
-.top-banner img {
-    height: auto;
+/* === Hero section κάτω από το banner === */
+.hero-banner {
+    padding-top: 80px;           /* ΠΗΓΕ ΠΙΟ ΠΑΝΩ! */
+    padding-bottom: 90px;
+    background: linear-gradient(135deg, #ffcce6, #ffe6ff);
+    text-align: center;
+    border-radius: 0 0 60px 60px;
+    margin-top: -15px;           /* ΚΟΛΛΑΕΙ όμορφα στο banner */
 }
+
 
 .btn-primary {
     display: inline-block;

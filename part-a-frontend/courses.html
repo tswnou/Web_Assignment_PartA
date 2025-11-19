@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | E-Learning</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/courses.css">
+</head>
+
+<body class="courses-page">
+
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle">
+            <img src="assets/img/menu-icon.png" alt="menu">
+        </button>
+
+        <nav class="nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="courses.html">Courses</a></li>
+                <li><a href="books.html">Books & Videos</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="register.html" class="btn-primary">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container">
+
+    <section class="courses-hero">
+
+        <h2 class="page-header">All Courses</h2>
+        <p class="page-description">Browse all learning tracks and categories.</p>
+
+        <div class="filter-box">
+            <label>Filter by Study Track:</label>
+
+            <div class="custom-select" id="trackSelect">
+                <div class="selected">All Tracks</div>
+                <div class="options">
+                    <div class="option">All Tracks</div>
+                    <div class="option">Data Science & Applied Math</div>
+                    <div class="option">Operations Research</div>
+                    <div class="option">Applied Mathematics</div>
+                    <div class="option">Theoretical Computer Science</div>
+                    <div class="option">Systems & Networks</div>
+                    <div class="option">Software Systems</div>
+                    <div class="option">Data & Knowledge Management</div>
+                    <div class="option">Cybersecurity</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid"></div>
+
+    </section>
+
+</main>
+
+<script src="assets/js/ui/menu.js"></script>
+<script src="assets/js/data/courses.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const grid = document.getElementById("coursesGrid");
+
+    function renderCourses(track = "All Tracks") {
+        grid.innerHTML = "";
+
+        const filtered = track === "All Tracks"
+            ? courses
+            : courses.filter(c => c.category === track);
+
+        filtered.forEach(course => {
+            const card = document.createElement("div");
+            card.className = "course-card";
+
+            card.innerHTML = `
+                <h3>${course.title}</h3>
+                <p class="description">${course.description}</p>
+                <span class="category-tag">${course.category}</span>
+                <a class="btn-secondary" href="course-details.html?id=${course.id}">
+                    Learn More
+                </a>
+            `;
+
+            grid.appendChild(card);
+        });
+    }
+
+    renderCourses();
+
+    const select = document.getElementById("trackSelect");
+    const selected = select.querySelector(".selected");
+    const optionsBox = select.querySelector(".options");
+    const options = select.querySelectorAll(".option");
+
+    selected.addEventListener("click", () => {
+        select.classList.toggle("open");
+        optionsBox.style.display =
+            optionsBox.style.display === "block" ? "none" : "block";
+    });
+
+    options.forEach(option => {
+        option.addEventListener("click", () => {
+            selected.textContent = option.textContent;
+            optionsBox.style.display = "none";
+            select.classList.remove("open");
+            renderCourses(option.textContent);
+        });
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!select.contains(e.target)) {
+            optionsBox.style.display = "none";
+            select.classList.remove("open");
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>
