@@ -1,6 +1,4 @@
-// ===========================
-//  CATEGORIES (English)
-// ===========================
+
 const categories = [
     "Data Science & Applied Math",
     "Operations Research",
@@ -12,9 +10,7 @@ const categories = [
     "Cybersecurity"
 ];
 
-// ===========================
-//  COURSES (English)
-// ===========================
+
 const courses = [
     // 1. Data Science & Applied Math
     {
