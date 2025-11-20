@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--ιδια με courses , index, register -->
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Course Details | E-Learning</title>
 
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -14,8 +17,10 @@
 
 <body>
 
+<!--  HEADER  -->
 <header class="header">
     <div class="container header-container">
+
         <div class="logo">
             <a href="index.html">
                 <img src="assets/img/logo.png" alt="Logo">
@@ -25,7 +30,6 @@
         <button class="menu-toggle" id="menu-toggle">
             <img src="assets/img/menu-icon.png" alt="menu">
         </button>
-
         <nav class="nav" id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -39,16 +43,29 @@
 </header>
 
 
+<!--  MAIN CONTENT  -->
 <main class="container">
 
+    <!-- περιεχόμενο του μαθήματος -> από JavaScript (course-details.js)με βάση  ID  -->
     <section id="course-details" class="course-details-box">
-        <!-- JS  -->
     </section>
 
 </main>
 
+<!--  SCRIPTS  -->
+
+<!-- mobile menu -->
 <script src="assets/js/ui/menu.js"></script>
+
+<!--   πίνακας "courses"-->
 <script src="assets/js/data/courses.js"></script>
+
+<!-- 
+    
+    - Διαβάζει το ID από  URL
+    - Βρίσκει το αντίστοιχο μάθημα στο courses.js
+    - Γεμίζει το <section id="course-details"> με πληροφορίες
+-->
 <script src="assets/js/pages/course-details.js"></script>
 
 </body>

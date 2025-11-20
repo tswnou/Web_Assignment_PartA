@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Register | E-Learning</title>
 
+    <!-- Σύνδεση με τα CSS αρχεία που καθορίζουν εμφάνιση + layout -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/layout.css">
@@ -13,19 +16,23 @@
 
 <body>
 
+<!-- HEADER / MENU  (ίδιο σε καθε σελίδα)-->
 <header class="header">
     <div class="container header-container">
 
+        <!-- Λογότυπο της πλατφόρμας  οδηγεί πίσω στην αρχική σελίδα -->
         <div class="logo">
             <a href="index.html">
                 <img src="assets/img/logo.png" alt="Logo">
             </a>
         </div>
 
+        <!-- Κουμπί  για  menu -->
         <button class="menu-toggle" id="menu-toggle">
             <img src="assets/img/menu-icon.png" alt="menu">
         </button>
 
+        <!-- Κύριο μενού πλοήγησης  -->
         <nav class="nav" id="main-nav">
             <ul>
                 <li><a href="index.html">Main Page</a></li>
@@ -42,25 +49,31 @@
 
 <main>
 
+<!--  REGISTER FORM SECTION  -->
 <section class="register-section">
 
+    <!-- Τίτλος  φόρμας -->
     <h2>Create an Account</h2>
     <p>Fill in your details to get started.</p>
 
+    <!-- Φόρμα εγγραφής  -->
     <form id="registerForm" class="register-form">
 
+        <!-- Σειρά με 2 input  ονομα + επίθετο -->
         <div class="form-row">
             <div class="form-field">
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName" required placeholder="e.g. Maria">
+        
+                <input type="text" id="firstName" required placeholder="e.g. Giorgos">
             </div>
 
             <div class="form-field">
                 <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" required placeholder="e.g. Papadopoulou">
+                <input type="text" id="lastName" required placeholder="e.g. Stergiopoulos">
             </div>
         </div>
 
+        <!-- Σειρά με Email +custom dropdown  Interest -->
         <div class="form-row">
             <div class="form-field">
                 <label for="email">Email</label>
@@ -69,6 +82,8 @@
 
             <div class="form-field">
                 <label for="interest">Your Interest</label>
+
+   
 <div class="custom-select" id="interestSelect">
     <div class="selected">Select...</div>
     <div class="options">
@@ -83,20 +98,25 @@
             </div>
         </div>
 
+        <!--  Password + Confirm Password -->
         <div class="form-row">
             <div class="form-field">
                 <label for="password">Password</label>
+                <!--  ασφάλεια , θέλει τουλ. 6 χαρακτήρες το password -->
                 <input type="password" id="password" required minlength="6">
             </div>
 
             <div class="form-field">
                 <label for="confirmPassword">Confirm Password</label>
+                <!-- ελεγχei με JS ότι ταιριάζει  το password -->
                 <input type="password" id="confirmPassword" required minlength="6">
             </div>
         </div>
 
+        <!-- Κουμπί υποβολής της φόρμας -->
         <button type="submit" class="btn-primary btn-register">Register</button>
 
+        <!-- Μήνυμα επιτυχούς εγγραφής -->
         <p class="success-msg" id="successMsg" style="display:none;">
             Registration completed successfully!
         </p>
@@ -107,6 +127,7 @@
 
 </main>
 
+<!-- JS για mobile menu + validation φόρμας -->
 <script src="assets/js/ui/menu.js"></script>
 <script src="assets/js/forms/register-form.js"></script>
 

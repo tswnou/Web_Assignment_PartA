@@ -1,4 +1,4 @@
-
+/*PAGE HEADER*/
 .page-header {
     font-size: 2.8rem;
     font-weight: 700;
@@ -28,7 +28,7 @@
     max-width: 900px;
 }
 
-
+/*FILTER BOX*/
 .filter-box {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -43,6 +43,7 @@
     color: #b30086;
 }
 
+/* Ετικέτα φίλτρου */
 .filter-box label {
     display: block;
     font-size: 1.2rem;
@@ -94,7 +95,7 @@
     color: #b30086 !important;
 }
 
-
+/*COURSES GRID*/
 .courses-grid {
     display: grid;
     gap: 25px;
@@ -102,19 +103,22 @@
     padding-bottom: 50px;
 }
 
+
+/* 2 στήλες για tablets */
 @media (min-width: 700px) {
     .courses-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* 3 στήλες για desktop */
 @media (min-width: 1100px) {
     .courses-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-
+/*COURSE CARD*/
 .course-card {
     background: #ffe6f7;
     border-radius: 20px;
@@ -128,17 +132,22 @@
     box-shadow: 0 10px 24px rgba(255, 120, 200, 0.35);
 }
 
+
+/* Τίτλος μαθήματος */
 .course-card h3 {
     color: #b30086;
     font-size: 1.4rem;
     margin-bottom: 10px;
 }
 
+/* Περιγραφή μαθήματος */
 .course-card .description {
     color: #444;
     margin-bottom: 12px;
 }
 
+
+/* Κατηγορία μαθήματος  */
 .category-tag {
     display: inline-block;
     background: #ffb3d9;
@@ -149,6 +158,7 @@
     margin-bottom: 15px;
 }
 
+/* Κουμπί “Learn More” */
 .btn-secondary {
     display: inline-block;
     margin-top: 10px;
@@ -169,7 +179,7 @@ h1, h2, h3, p, label, a, span, div {
     letter-spacing: 0.4px;
 }
 
-
+/*BACKGROUND WRAPPER*/
 .courses-bg-wrapper {
     background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;
     padding: 40px 0;
@@ -182,7 +192,7 @@ body.courses-page {
     background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;
 }
 
-
+/* FULL PAGE BACKGROUND */
 body.courses-page {
     position: relative;
     background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;

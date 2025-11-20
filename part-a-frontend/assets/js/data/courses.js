@@ -1,3 +1,4 @@
+//Λίστα με όλες τις κατηγορίες μαθημάτων
 
 const categories = [
     "Data Science & Applied Math",
@@ -10,6 +11,7 @@ const categories = [
     "Cybersecurity"
 ];
 
+//Κεντρικός πίνακας "courses" με όλα τα μαθήματα και τις λεπτομέρειές τους 
 
 const courses = [
     // 1. Data Science & Applied Math
