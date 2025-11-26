@@ -1,0 +1,316 @@
+/*PAGE HEADER*/
+.page-header {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #b30086;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.page-description {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: #7a0064;
+}
+
+.books-hero {
+    background: linear-gradient(135deg, #ffd6ef, #ffe6f7, #fff0fa);
+    padding: 50px 30px 40px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 40px auto 60px;
+    box-shadow: 0 10px 30px rgba(55, 27, 46, 0.2);
+    max-width: 900px;
+}
+
+/*FILTER BOX*/
+.filter-box {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 1.1rem;
+    color: #b30086;
+}
+
+/* Ετικέτα φίλτρου */
+.filter-box label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #b30086;
+    letter-spacing: 0.4px;
+}
+
+.filter-box select {
+    padding: 12px 16px;
+    border-radius: 14px;
+    border: 2px solid #ffb3d9;
+    background: #ffffff;
+    font-size: 1rem;
+    color: #444;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='%23b30086' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6l4 4 4-4H4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+
+    box-shadow: 0 4px 12px rgba(255, 170, 230, 0.25);
+    transition: 0.2s ease;
+}
+
+.filter-box select:focus {
+    border-color: #ff66c4;
+    box-shadow: 0 0 10px rgba(255, 100, 200, 0.35);
+}
+
+.filter-box select option {
+    background: #ffffff;
+    color: #444;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.filter-box select option:hover {
+    background: #ffe6f7 !important;
+    color: #b30086 !important;
+}
+
+.filter-box select option:checked {
+    background: #ffd6ef !important;
+    color: #b30086 !important;
+}
+
+/*BOOKS GRID*/
+.books-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr;
+    padding-bottom: 50px;
+}
+
+
+/* 1 στήλη για tablets */
+@media (min-width: 700px) {
+    .books-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* 1 στήλη για desktop */
+@media (min-width: 1100px) {
+    .books-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*VIDEOS GRID*/
+.videos-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr;
+    padding-bottom: 50px;
+}
+
+/* 1 στήλη tablet */
+@media (min-width: 700px) {
+    .videos-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* 1 στήλη desktop */
+@media (min-width: 1100px) {
+    .videos-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*BOOKS CARD*/
+.book-card {
+    display: flex;
+    flex-direction: row;      /* εικόνα αριστερά, κείμενο δεξιά */
+    align-items: flex-start;
+    background: #ffe6f7;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(255, 150, 220, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+    gap: 20px;   
+}
+
+@media (max-width: 699px) {
+    .book-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(255, 120, 200, 0.35);
+}
+
+/*Εικονα Βιβλίου*/
+.book-cover {
+    width: 120px;             
+    height: 160px;            
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(255, 150, 220, 0.25);
+}
+
+/* Το κείμενο δεξιά της εικόνας */
+.book-card-content {
+    flex: 1;                  
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Τίτλος ΒΙΒΛΙΟΥ */
+.book-card h3 {
+    color: #c927a0;
+    font-size: 1.4rem;
+    margin: 0 0 8px 0;
+}
+
+/* Περιγραφή βιβλίου */
+.book-card-content .description {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+
+/* Κατηγορία βιβλίου  */
+.category-tag {
+     display: inline-block;
+    background: #ffb3d9;
+    color: #7a0064;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+
+/*BACKGROUND WRAPPER*/
+.books-bg-wrapper {
+    background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;
+    padding: 40px 0;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+
+body.books-page {
+    background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;
+}
+
+/* FULL PAGE BACKGROUND */
+body.books-page {
+    position: relative;
+    background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;
+}
+
+body.books-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 240, 250, 0.6); 
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/*VIDEO CARD*/
+.video-card {
+    background: #ffe6f7;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(255, 150, 220, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (max-width: 699px) {
+    .video-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.video-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(255, 120, 200, 0.35);
+}
+
+.video-card-content h3 {
+    color: #b30086;
+    font-size: 1.4rem;
+    margin: 0 0 8px 0;
+}
+
+.video-card-content .description {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.video-duration {
+    display: inline-block;
+    background: #ffb3d9;
+    color: #7a0064;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.video-tag {
+    display: inline-block;
+    background: #c9e2ff;
+    color: #853a7b;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Κουμπί “Watch Here” */
+.btn-secondary {
+    align-self: flex-start;
+    background: linear-gradient(135deg, #89134e, #89134e58);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+h1, h2, h3, p, label, a, span, div {
+    letter-spacing: 0.4px;
+}
+
+

@@ -1,0 +1,80 @@
+/* Full page background  */
+body.about-page {
+    margin: 0;
+    min-height: 100vh;
+    background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;
+    position: relative;
+}
+
+body.about-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 240, 250, 0.6); /* light overlay */
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Central container centered vertically and horizontally */
+.about-container {
+    max-width: 900px;
+    width: 100%;
+    background: linear-gradient(135deg, #ffd6ef, #ffe6f7, #fff0fa);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(55, 27, 46, 0.2);
+    padding: 40px 30px;
+    text-align: center;
+
+    /* Centering */
+    margin: 60px auto; /* vertical spacing from top */
+}
+
+/* PAGE HEADER */
+.page-header {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #b30086;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.page-description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* Team section */
+.team-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 40px;
+}
+
+.team-card {
+    background: #ffe6f7;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(255, 150, 220, 0.25);
+    text-align: center;
+}
+
+.team-card h3 {
+    color: #b30086;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    color: #444;
+    margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

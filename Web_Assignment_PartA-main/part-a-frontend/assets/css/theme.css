@@ -1,0 +1,20 @@
+/*χρώματα της πλατφόρμας*/
+
+:root {
+    --primary-color: #c850c0;
+    --secondary-color: #ffb3d9;
+    --text-color: #5e0f5e;   /* Χρώμα κειμένου */
+    --background-color: #ffe6f2; /* ροζ background */
+}
+
+body {
+    background-color: var(--background-color);   /* Ροζ background της πλατφόρμας */
+    color: var(--text-color); /* Χρώμα για όλο το κείμενο */
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Oxygen, Ubuntu, Cantarell,
+                 "Helvetica Neue", Arial, sans-serif;
+
+                 /*  απόσταση ανάμεσα στα γράμματα για καλύτερη  εμφάνιση */
+    letter-spacing: 0.3px;
+}
