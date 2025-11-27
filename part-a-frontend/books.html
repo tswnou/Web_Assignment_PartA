@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTML5 -->
+    <meta charset="UTF-8">
+
+    <!-- κινητά  tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Τίτλος r -->
+    <title>Books & Videos | E-Learning</title>
+
+    <!--  CSS  -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/books.css">
+</head>
+
+<body class="books-page">
+
+<header class="header">
+    <div class="container header-container">
+
+        <!-- logo -->
+        <div class="logo">
+            <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+        </div>
+
+        <!-- button gia menu -->
+        <button class="menu-toggle" id="menu-toggle">
+            <img src="assets/img/menu-icon.png" alt="menu">
+        </button>
+
+        <!--  menu  -->
+        <nav class="nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="courses.html">Courses</a></li>
+
+                <li><a class="active" href="books.html">Books & Videos</a></li>
+                
+                <li><a href="about.html">About Us</a></li>
+
+                <li><a href="register.html" class="btn-primary">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container">
+
+    <!--  HERO SECTION  -->
+    <section class="books-hero">
+
+        <!-- Τίτλος   + περιγραφή  -->
+        <h2 class="page-header">Books & Video Library</h2>
+        <p class="page-description">Explore computer science textbooks, video tutorials and academic references.</p>
+
+        <!--  επιλογή κατηγορίας μαθημάτων -->
+        <div class="filter-box">
+            <label>Filter by Category:</label>
+
+            <!--  dropdown  -->
+            <div class="custom-select" id="bookSelect">
+                <div class="selected">All Categories</div>
+
+                <!--  options  όταν  user ανοίγει το dropdown -->
+                <div class="options">
+                    <div class="option">All Categories</div>
+                    <div class="option">Computer Science</div>
+                    <div class="option">Mathematics</div>
+                    <div class="option">Algorithms</div>
+                    <div class="option">Machine Learning</div>
+                    <div class="option">Networks</div>
+                    <div class="option">Cybersecurity</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOOKS SECTION -->
+        <section class="recommended-section recommended-books">
+            <h2 class="section-title">Recommended Books</h2>
+            <p class="section-description">Selected textbooks and references to deepen your knowledge.</p>
+
+            <div class="books-grid" id="recommendedBooksGrid"></div>
+        </section>
+
+        <div class="books-grid" id="booksGrid"></div>
+
+        <!-- VIDEOS SECTION -->
+        <section class="recommended-section">
+            <h2 class="section-title">Recommended Videos</h2>
+            <p class="section-description">Handpicked tutorials and lectures you may find useful.</p>
+
+            <div class="videos-grid" id="recommendedGrid"></div>
+        </section>
+
+        <div class="videos-grid" id="videosGrid"></div>
+
+    </section>
+
+    
+
+</main>
+
+<!-- JavaScript για  mobile menu -->
+<script src="assets/js/ui/menu.js"></script>
+
+<!--   πίνακας με  βιβλια και βιντεο  -->
+<script src="assets/js/data/books.js"></script>
+<script src="assets/js/data/videos.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const booksGrid = document.getElementById("booksGrid");
+    const videosGrid = document.getElementById("videosGrid");
+
+    const recommendedBooksGrid = document.getElementById("recommendedBooksGrid");
+    const recommendedGrid = document.getElementById("recommendedGrid");
+
+    /* ----------------------- BOOKS ---------------------- */
+
+    function renderBooks(track = "All Categories") {
+        booksGrid.innerHTML = ""; 
+
+        const filtered = track === "All Categories"
+            ? books
+            : books.filter(c => c.category === track);
+
+        filtered.forEach(book => {
+            const card = document.createElement("div");
+            card.className = "book-card";
+
+            card.innerHTML = `
+                <img class="book-cover" src="${book.image}" alt="${book.title}">
+                <div class="book-card-content">
+                    <h3>${book.title}</h3>
+                    <p class="description">${book.description}</p>
+                    <span class="category-tag">${book.category}</span>
+                </div>
+            `;
+
+            booksGrid.appendChild(card);
+        });
+    }
+
+    function renderRecommendedBooks() {
+        recommendedBooksGrid.innerHTML = "";
+
+        const list = books.filter(b => b.recommended === true);
+
+        list.forEach(book => {
+            const card = document.createElement("div");
+            card.className = "book-card";
+
+            card.innerHTML = `
+                <img class="book-cover" src="${book.image}" alt="${book.title}">
+                <div class="book-card-content">
+                    <h3>${book.title}</h3>
+                    <p class="description">${book.description}</p>
+                    <span class="category-tag">${book.category}</span>
+                </div>
+            `;
+
+            recommendedBooksGrid.appendChild(card);
+        });
+    }
+
+
+    /* ----------------------- VIDEOS ---------------------- */
+
+    function renderVideos(track = "All Categories") {
+        videosGrid.innerHTML = ""; // καθαρίζουμε μόνο τα videos
+
+        const filtered = track === "All Categories"
+            ? videos
+            : videos.filter(v => v.category === track);
+
+        filtered.forEach(video => {
+            const card = document.createElement("div");
+            card.className = "video-card";
+
+            card.innerHTML = `
+                <div class="video-card-content">
+                    <h3>${video.title}</h3>
+                    <p class="description">${video.description}</p>
+                    <div class="video-info">
+                        <span class="category-tag">${video.category}</span>
+                        <span class="video-duration">${video.duration}</span>
+                    </div>
+                    <a class="btn-secondary" href="${video.youtubeLink}" target="_blank">Watch Here</a>
+                </div>
+            `;
+
+            videosGrid.appendChild(card);
+        });
+    }
+
+
+
+    function renderRecommendedVideos() {
+        recommendedGrid.innerHTML = "";
+
+        const list = videos.filter(v => v.recommended === true);
+
+        list.forEach(video => {
+            const card = document.createElement("div");
+            card.className = "video-card";
+  
+            card.innerHTML = `
+                <img class="video-thumb" src="${video.thumbnail}" alt="${video.title}">
+                <div class="video-card-content">
+                    <h3>${video.title}</h3>
+                    <p class="description">${video.description}</p>
+                    <div class="video-info">
+                        <span class="category-tag">${video.category}</span>
+                        <span class="video-duration">${video.duration}</span>
+                    </div>
+                    <a class="btn-secondary" href="${video.youtubeLink}" target="_blank">Watch Video</a>
+                </div>
+            `;
+
+            recommendedGrid.appendChild(card);
+        });
+    }
+
+    /* INITIAL RENDER */
+    renderBooks();
+    renderRecommendedBooks();
+    renderVideos();
+    renderRecommendedVideos();
+
+    /* --------------------- FILTER --------------------- */
+
+    const select = document.getElementById("bookSelect");
+    const selected = select.querySelector(".selected");
+    const optionsBox = select.querySelector(".options");
+    const options = select.querySelectorAll(".option");
+
+    selected.addEventListener("click", () => {
+        select.classList.toggle("open");
+        optionsBox.style.display =
+            optionsBox.style.display === "block" ? "none" : "block";
+    });
+
+    options.forEach(option => {
+        option.addEventListener("click", () => {
+            const selectedCategory = option.textContent;
+            selected.textContent = selectedCategory;
+            optionsBox.style.display = "none";
+            select.classList.remove("open");
+
+            // Φιλτράρουμε βιβλία
+            renderBooks(selectedCategory);
+
+            // Φιλτράρουμε videos
+            renderVideos(selectedCategory);
+
+        });
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!select.contains(e.target)) {
+            optionsBox.style.display = "none";
+            select.classList.remove("open");
+        }
+    });
+
+});
+</script>
+
+
+</body>
+</html>
