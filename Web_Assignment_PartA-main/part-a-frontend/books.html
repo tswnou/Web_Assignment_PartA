@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- HTML5 -->
+    <!-- HTML-->
     <meta charset="UTF-8">
 
     <!-- κινητά  tablets -->
@@ -107,10 +107,10 @@
 
 </main>
 
-<!-- JavaScript για  mobile menu -->
+<!-- JavaScript  -->
 <script src="assets/js/ui/menu.js"></script>
 
-<!--   πίνακας με  βιβλια και βιντεο  -->
+<!--   πίνακας  βιβλια και βιντεο  -->
 <script src="assets/js/data/books.js"></script>
 <script src="assets/js/data/videos.js"></script>
 
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const recommendedBooksGrid = document.getElementById("recommendedBooksGrid");
     const recommendedGrid = document.getElementById("recommendedGrid");
 
-    /* ----------------------- BOOKS ---------------------- */
+    /*  BOOKS  */
 
     function renderBooks(track = "All Categories") {
         booksGrid.innerHTML = ""; 
@@ -172,10 +172,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* ----------------------- VIDEOS ---------------------- */
+    /*  VIDEOS  */
 
     function renderVideos(track = "All Categories") {
-        videosGrid.innerHTML = ""; // καθαρίζουμε μόνο τα videos
+        videosGrid.innerHTML = ""; 
 
         const filtered = track === "All Categories"
             ? videos
@@ -229,13 +229,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* INITIAL RENDER */
     renderBooks();
     renderRecommendedBooks();
     renderVideos();
     renderRecommendedVideos();
 
-    /* --------------------- FILTER --------------------- */
+    /*  FILTER  */
 
     const select = document.getElementById("bookSelect");
     const selected = select.querySelector(".selected");

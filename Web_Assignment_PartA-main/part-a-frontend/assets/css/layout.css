@@ -21,7 +21,7 @@
     margin: 0;
 }
  
-/*Κεντρικό κείμενο κάτω από το banner -> hero*/
+/* κείμενο κάτω από το banner -> hero*/
 .hero-text {
     text-align: center;
     padding: 20px 10px 30px;
@@ -133,7 +133,7 @@
 }
 
 
-/*       LOGO + HEADER  */
+/*  LOGO + HEADER  */
 
 
 .header-container {
@@ -202,7 +202,7 @@
     display: block;
 }
 
-/*  Hero section κάτω από το banner  */
+/*  Hero section κάτω από  banner  */
 .hero-banner {
     padding-top: 80px;           
     padding-bottom: 90px;

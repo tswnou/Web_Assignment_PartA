@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Παίρνουμε  παραμέτρους από  URL
     const params = new URLSearchParams(window.location.search);
 
-    // id σε ακέραιο
+    // id -> ακέραιο
     const courseId = parseInt(params.get("id"));
 
     // Βρίσκουμε αντικείμενο μαθήματος που έχει το id
@@ -24,15 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
     box.innerHTML = `
         <h2>${course.title}</h2>
 
-        <!-- Κατηγορία μαθήματος -->
+        <!-- Κατηγορία  -->
         <span class="category-tag">${course.category}</span>
 
-        <!-- Περιγραφή μαθήματος -->
+        <!-- Περιγραφή  -->
         <p>${course.description}</p>
 
         <br><br>
 
-        <!-- Κουμπί επιστροφής στη σελίδα Courses -->
+        <!--  επιστροφή στη σελίδα Courses -->
         <a class="btn-secondary" href="courses.html">Back to Courses</a>
     `;
 });

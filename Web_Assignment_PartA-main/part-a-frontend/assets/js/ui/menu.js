@@ -1,10 +1,10 @@
 //Περιμένουμε το HTML πριν τρέξει ο κώδικας
 document.addEventListener("DOMContentLoaded", () => {
 
-    //κουμπί του  menu
+    //κουμπί menu
     const toggle = document.getElementById("menu-toggle");
 
-    //sidebar navigation menu
+    //sidebar menu
     const nav = document.getElementById("main-nav");
 
     // Αν δεν υπάρχουν τα στοιχεία στο DOM σταματάμε για αποφυγή λαθών

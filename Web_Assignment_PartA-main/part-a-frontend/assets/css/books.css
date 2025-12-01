@@ -43,7 +43,6 @@
     color: #b30086;
 }
 
-/* Ετικέτα φίλτρου */
 .filter-box label {
     display: block;
     font-size: 1.2rem;
@@ -104,14 +103,14 @@
 }
 
 
-/* 1 στήλη για tablets */
+/* tablets */
 @media (min-width: 700px) {
     .books-grid {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
-/* 1 στήλη για desktop */
+/*  desktop */
 @media (min-width: 1100px) {
     .books-grid {
         grid-template-columns: repeat(1, 1fr);
@@ -125,15 +124,14 @@
     grid-template-columns: 1fr;
     padding-bottom: 50px;
 }
-
-/* 1 στήλη tablet */
+/*  tablet */
 @media (min-width: 700px) {
     .videos-grid {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
-/* 1 στήλη desktop */
+/*  desktop */
 @media (min-width: 1100px) {
     .videos-grid {
         grid-template-columns: repeat(1, 1fr);
@@ -143,7 +141,7 @@
 /*BOOKS CARD*/
 .book-card {
     display: flex;
-    flex-direction: row;      /* εικόνα αριστερά, κείμενο δεξιά */
+    flex-direction: row;      
     align-items: flex-start;
     background: #ffe6f7;
     border-radius: 20px;
@@ -166,7 +164,6 @@
     box-shadow: 0 10px 24px rgba(255, 120, 200, 0.35);
 }
 
-/*Εικονα Βιβλίου*/
 .book-cover {
     width: 120px;             
     height: 160px;            
@@ -175,7 +172,7 @@
     box-shadow: 0 4px 16px rgba(255, 150, 220, 0.25);
 }
 
-/* Το κείμενο δεξιά της εικόνας */
+/* κείμενο δεξιά απο  εικόνα */
 .book-card-content {
     flex: 1;                  
     display: flex;
@@ -190,14 +187,14 @@
     margin: 0 0 8px 0;
 }
 
-/* Περιγραφή βιβλίου */
+/* Περιγραφή  */
 .book-card-content .description {
     color: #444;
     margin-bottom: 10px;
 }
 
 
-/* Κατηγορία βιβλίου  */
+/* Κατηγορία   */
 .category-tag {
      display: inline-block;
     background: #ffb3d9;
@@ -209,7 +206,7 @@
 }
 
 
-/*BACKGROUND WRAPPER*/
+/*BACKGROUND */
 .books-bg-wrapper {
     background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;
     padding: 40px 0;
@@ -222,7 +219,7 @@ body.books-page {
     background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;
 }
 
-/* FULL PAGE BACKGROUND */
+/* BACKGROUND */
 body.books-page {
     position: relative;
     background: url("../img/courses-bg.jpg") center/cover no-repeat fixed;
@@ -238,7 +235,7 @@ body.books-page::before {
 }
 
 
-/*VIDEO CARD*/
+/*VIDEO */
 .video-card {
     background: #ffe6f7;
     border-radius: 20px;
@@ -293,7 +290,7 @@ body.books-page::before {
     margin-bottom: 10px;
 }
 
-/* Κουμπί “Watch Here” */
+/* Κουμπί Watch Here */
 .btn-secondary {
     align-self: flex-start;
     background: linear-gradient(135deg, #89134e, #89134e58);

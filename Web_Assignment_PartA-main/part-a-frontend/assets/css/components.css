@@ -271,7 +271,7 @@
     font-weight: 600;
 }
 
-/* REGISTER FORM STYLING */
+/* REGISTER FORM  */
 .register-section {
     max-width: 800px;
     margin: 50px auto;
@@ -332,7 +332,7 @@
 }
 
 
-/* Inputs – clean white style */
+/* Inputs – clean */
 .form-field input {
     background: #ffffff; 
     border: 2px solid #ffb3d9;
@@ -491,7 +491,7 @@
     background: #fff;
 }
 
-/* Hover — pink highlight */
+/* Hover  */
 .custom-select .option:hover {
     background: #ffe6f7;
     color: #b30086;
@@ -533,7 +533,7 @@
     box-shadow: 0 3px 12px rgba(255, 120, 200, 0.55) !important;
 }
 
-/* Custom dropdown base */
+/*  dropdown base */
 .custom-select {
     position: relative;
     width: 260px;

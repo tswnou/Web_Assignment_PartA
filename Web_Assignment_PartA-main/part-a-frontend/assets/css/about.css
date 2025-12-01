@@ -1,4 +1,4 @@
-/* Full page background  */
+/* background  */
 body.about-page {
     margin: 0;
     min-height: 100vh;
@@ -10,12 +10,12 @@ body.about-page::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255, 240, 250, 0.6); /* light overlay */
+    background: rgba(255, 240, 250, 0.6); 
     pointer-events: none;
     z-index: -1;
 }
 
-/* Central container centered vertically and horizontally */
+/* Central container */
 .about-container {
     max-width: 900px;
     width: 100%;
@@ -25,8 +25,7 @@ body.about-page::before {
     padding: 40px 30px;
     text-align: center;
 
-    /* Centering */
-    margin: 60px auto; /* vertical spacing from top */
+    margin: 60px auto; 
 }
 
 /* PAGE HEADER */
@@ -72,7 +71,6 @@ body.about-page::before {
     margin: 4px 0;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
     .team-grid {
         grid-template-columns: 1fr;
